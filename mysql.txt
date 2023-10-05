@@ -1,0 +1,27 @@
+#Menampilkan database yang ada
+show databases;
+
+#Membuat database dbpegawai
+create database dbpegawai;
+
+#Masuk/memakai database yang akan digunakan
+use dbpegawai;
+
+#Melihat tables yang ada pada database
+show tables;
+
+#Membuat table pegawai
+create table pegawai(
+    id int primary key,
+    nip char(5) not null unique,
+    nama varchar(30) not null  unique,
+    gender enum('L','P') not null,
+    umur int not null,
+    berat_badan float
+);
+
+#Menampilkan isi dari table pegawai
+select * from pegawai;
+
+#Menampikan deskripsi dari table tersebut
+desc pegawai;
